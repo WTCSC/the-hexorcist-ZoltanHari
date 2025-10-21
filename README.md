@@ -32,7 +32,7 @@ cd the-hexorcist-ZoltanHari
 
 ## Usage Example
 
-
+![Image showing an example of how to use the Hexorcist](images/hexorcism.png)
 
 ## Testing
 
@@ -40,6 +40,6 @@ To run the tests for the calculator, you need to enter **`pytest path/to/hexorci
 
 ## Testing Example
 
-
+![Image showing the tests being run and passing](hextest.png)
 
 ## Decision Tree 

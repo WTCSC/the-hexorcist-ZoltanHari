@@ -69,7 +69,9 @@ if __name__ == "__main__":
 
         invalid_digits_for_base = [char for char in number_string if digits.index(char.upper()) >= original_base]
         if invalid_digits_for_base:
-            type_out(f"Error: Digit(s) '{' '.join(invalid_digits_for_base)}' not valid for base {original_base}.")
+            bads = ' '.join(invalid_digits_for_base)
+            plural = 's' if len(invalid_digits_for_base) > 1 else ''
+            type_out(f"That base demon cannot dwell in base {original_base}.")
             continue
         else:
             break
@@ -89,4 +91,4 @@ if __name__ == "__main__":
 
     decimal_value = to_decimal(number_string, original_base)
     result_string = from_decimal(decimal_value, new_base)
-    type_out(f"{number_string} in base {original_base} is {result_string} in base {new_base}")
+    type_out(f"After exorcising the demon {original_base}, I was able to get the number string {result_string} by extracting the base demon {new_base}")
