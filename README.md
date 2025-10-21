@@ -40,6 +40,6 @@ To run the tests for the calculator, you need to enter **`pytest path/to/hexorci
 
 ## Testing Example
 
-![Image showing the tests being run and passing](hextest.png)
+![Image showing the tests being run and passing](images/hextest.png)
 
 ## Decision Tree 
