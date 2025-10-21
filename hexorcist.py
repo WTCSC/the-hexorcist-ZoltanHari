@@ -50,21 +50,21 @@ def validate_different_bases(original_base, new_base):
 
 if __name__ == "__main__":
     while True:
-        type_out("Enter Number String:")
+        type_out("Please tell me the number string that needs exorcising:")
         number_string = input().strip().upper()
         invalid_chars = validate_number_string(number_string)
         if invalid_chars:
-            type_out(f"Invalid characters found: '{' '.join(invalid_chars)}'. Try again.")
+            type_out(f"The number string '{' '.join(invalid_chars)}' doesn't need to be exorcised, please tell me the one that actually needs exorcising.")
         else:
             break
 
     while True:
-        type_out("Enter Original Base (2–36):")
+        type_out("Tell me the base that has possessed the number string (2–36):")
         try:
             original_base = int(input())
             validate_base(original_base)
-        except ValueError as e:
-            type_out(f"Error: {e}. Try again.")
+        except ValueError:
+            type_out("That not a demon base that can possess a number string. Tell me which demon possessed the number string")
             continue
 
         invalid_digits_for_base = [char for char in number_string if digits.index(char.upper()) >= original_base]
@@ -75,13 +75,13 @@ if __name__ == "__main__":
             break
 
     while True:
-        type_out("Enter New Base (2–36):")
+        type_out("Tell me which base you need to have after the exorcism (2–36):")
         try:
             new_base = int(input())
             validate_base(new_base)
             validate_different_bases(original_base, new_base)
-        except ValueError as e:
-            type_out(f"Error: {e}. Try again.")
+        except ValueError:
+            type_out("That not one of the demon bases I get from the exorcism. Tell me which demon I need to extract the number string")
             continue
         else:
             break

@@ -36,18 +36,10 @@ cd the-hexorcist-ZoltanHari
 
 ## Testing
 
-
+To run the tests for the calculator, you need to enter **`pytest path/to/hexorcist/the-hexorcist-ZoltanHari`** in the terminal, wait for the tests to finish, and see the result
 
 ## Testing Example
 
 
 
-## Path Modification
-
-
-
-## Path Modification Example
-
-
-
-## Decision Tree
+## Decision Tree 
