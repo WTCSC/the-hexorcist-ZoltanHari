@@ -91,4 +91,4 @@ if __name__ == "__main__":
 
     decimal_value = to_decimal(number_string, original_base)
     result_string = from_decimal(decimal_value, new_base)
-    type_out(f"After exorcising the demon {original_base}, I was able to get the number string {result_string} by extracting the base demon {new_base}")
+    type_out(f"After exorcising the base demon {original_base}, I was able to get the number string {result_string} by extracting the base demon {new_base}")
