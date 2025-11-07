@@ -11,6 +11,17 @@ def type_out(text, delay=0.03):
 digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 def to_decimal(number_string, original_base):
+    """
+    Converts users number string from original base to a decimal
+
+    ARGS:
+        number_string (str): number string user wants to convert
+        original_base (str): base the number string is in
+
+    Returns: 
+        total_value (int): decimal value of the number string
+    """
+
     total_value = 0
     power = 0
     for char in number_string[::-1]:
@@ -20,6 +31,17 @@ def to_decimal(number_string, original_base):
     return total_value
 
 def from_decimal(total_value, new_base):
+    """
+    Converts decimal value to the new base number string
+
+    ARGS:
+        total_value (int): decimal value of the number string
+        new_base (int): base user wants to convert to 
+          
+    Returns: 
+        result_string (str): number string in the new base
+    """
+
     if new_base < 2 or new_base > 36:
         raise ValueError("Base must be between 2 and 36")
     if total_value == 0:
@@ -31,6 +53,7 @@ def from_decimal(total_value, new_base):
         result_string = digits[remainder] + result_string
     return result_string
 
+# Vadlidation functions outtside main logic for easier testing
 def validate_number_string(number_string):
     invalid_chars = [c for c in number_string if c not in digits]
     return invalid_chars
@@ -47,7 +70,7 @@ def validate_different_bases(original_base, new_base):
         raise ValueError("New base must be different from original base")
     return True
 
-
+# Used to run the main program only when executed directly for faster testing
 if __name__ == "__main__":
     while True:
         type_out("Please tell me the number string that needs exorcising:")
